@@ -1,0 +1,78 @@
+.finish {
+  position: relative;
+  // height: calc(220vh - 44px);
+  // height: calc(400vh - 44px);
+  height: 600vh;
+  padding: 44px 0 0;
+
+  &-background {
+    @include fixed-X-center;
+    bottom: 0px;
+    width: 80vw;
+    height: 100vh;
+    @include background-image('../../style/resource/main/finish.png', cover);
+    z-index: -3;
+  }
+
+  .logo {
+    width: 580px;
+    @include fixed-X-center;
+
+    img {
+      width: 100%;
+    }
+
+    h4 {
+      @include fixed-X-center;
+      width: 39%;
+      padding: 8px 40px;
+      text-align: center;
+      background: $hight-light;
+      border-radius: 25px;
+    }
+  }
+
+  .decorate {
+    width: 80vw;
+    margin: 0 auto;
+    position: relative;
+
+    &-1,
+    &-2 {
+      position: fixed;
+      top: 350px;
+      z-index: -1000;
+      width: 430px;
+      height: 280px;
+    }
+
+    &-1 {
+      left: -100px;
+      @include background-image('../../style/resource/bg/bg_decorate_01.png', cover)
+    }
+
+    &-2 {
+      right: -100px;
+      @include background-image('../../style/resource/bg/bg_decorate_05.png', 100%)
+    }
+
+    &-3,&-4{
+      position: fixed;
+      top: 550px;
+      width: 52%;
+      // width: 48%;
+      height: 129px;
+      z-index: 1000;
+    }
+    &-3 {
+      left: 0;
+      @include background-image('../../style/resource/main/finishLine_l.png', 100%)
+    }
+    &-4 {
+      right: 0;
+      @include background-image('../../style/resource/main/finishLine_r.png', 100%)
+    }
+  }
+
+
+}

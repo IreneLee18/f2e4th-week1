@@ -1,0 +1,76 @@
+.instruction {
+  position: relative;
+  // height: 120vh;
+  height: 520vh;
+  padding: 44px 0 0;
+
+  &-item {
+    @include fixed-X-center;
+    top: 480px;
+    @include background-image('../../style/resource/main/date_line.png', 100%);
+    display: flex;
+    justify-content: space-around;
+    height: 100vh;
+    width: 90vw;
+
+    li {
+      position: fixed;
+      top: -230px;
+      text-align: center;
+      font-weight: bold;
+
+      &:nth-child(1) {
+        left: 0;
+
+        img {
+          top: -185px;
+          left: 64px;
+        }
+      }
+
+      &:nth-child(2) {
+        img {
+          top: -239px;
+          left: 610px;
+        }
+      }
+
+      &:nth-child(3) {
+        right: 0;
+
+        img {
+          top: -195px;
+          right: 112px;
+        }
+      }
+    }
+
+    .content {
+      background: $secondary;
+      z-index: 2;
+      padding-bottom: 20px;
+    }
+
+    h4 {
+      display: inline-block;
+      background: $primary;
+      border-radius: 25px;
+      padding: 4px 24px;
+      margin: 12px 0;
+    }
+
+    h5 {
+      line-height: 1.3;
+    }
+
+    .line {
+      img {
+        z-index: -1;
+        position: fixed;
+        transform: scale(.3);
+      }
+    }
+
+
+  }
+}

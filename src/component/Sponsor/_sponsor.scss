@@ -1,0 +1,81 @@
+.sponsor {
+  position: relative;
+  // height: 120vh;
+  height: 520vh;
+  padding: 44px 0 0;
+
+  &-title {
+    @include fixed-X-center;
+    top: 65px;
+
+    img {
+      @include fixed-X-center;
+      width: 40vw;
+      top: -30px;
+      object-fit: cover;
+    }
+
+    h2 {
+      text-align: center;
+      position: relative;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+
+  }
+
+  &-decorate {
+
+    &-1,
+    &-2 {
+      width: 375px;
+      height: 375px;
+      position: fixed;
+      top: 250px;
+    }
+
+    // &-1 {
+    //   @include background-image('../../style/resource/bg/bg_decorate_04.png', 100%);
+    //   left: -100px;
+    // }
+
+    // &-2 {
+    //   @include background-image('../../style/resource/bg/bg_decorate_04.png', 100%);
+    //   right: -100px;
+    // }
+  }
+
+  &-item {
+    @include fixed-X-center;
+    width: 80vw;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    li{
+      @include flex-center;
+      flex-direction: column;
+      width: 33.3333%;
+    }
+    div{
+      width: 250px;
+      height: 250px;
+      margin-bottom: 24px;
+    }
+   .block{
+    @include background-image('../../style/resource/main/logo_blockstudio.png',cover)
+   }
+   .tita{
+    @include background-image('../../style/resource/main/logo_titansoft.png',cover)
+   }
+   .kdan{
+    @include background-image('../../style/resource/main/logo_kdanmobile.png',cover)
+   }
+   p{
+    font-weight: bold;
+    border: 1px solid $dark-secondary;
+    border-radius: 25px;
+    padding: 4px 24px;
+   }
+  }
+}
