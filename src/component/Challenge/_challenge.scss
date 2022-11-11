@@ -1,12 +1,10 @@
 .challenge {
-  position: relative;
-  // height: 120vh;
-  height: 420vh;
-  padding: 44px 0 0;
+  @include component-100vh;
 
   &-title {
     @include fixed-X-center;
     top: 65px;
+    opacity: 0;
 
     img {
       @include fixed-X-center;
@@ -36,6 +34,11 @@
     top: 0;
     height: 100vh;
     width: 90vw;
+
+    li {
+      opacity: 0;
+      display: none;
+    }
 
     .week1 {
       @include background-image('../../style/resource/main/week_1.png', cover)

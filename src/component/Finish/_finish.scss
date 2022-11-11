@@ -1,17 +1,16 @@
 .finish {
-  position: relative;
-  // height: calc(220vh - 44px);
-  // height: calc(400vh - 44px);
-  height: 600vh;
-  padding: 44px 0 0;
+  @include component-100vh;
+  opacity: 0;
 
-  &-background {
+  &-flag {
     @include fixed-X-center;
     bottom: 0px;
     width: 80vw;
     height: 100vh;
     @include background-image('../../style/resource/main/finish.png', cover);
-    z-index: -3;
+    z-index: -10;
+    opacity: 0;
+    display: none;
   }
 
   .logo {
@@ -32,7 +31,7 @@
     }
   }
 
-  .decorate {
+  .finish-decorate {
     width: 80vw;
     margin: 0 auto;
     position: relative;
@@ -48,7 +47,7 @@
 
     &-1 {
       left: -100px;
-      @include background-image('../../style/resource/bg/bg_decorate_01.png', cover)
+      @include background-image('../../style/resource/bg/bg_decorate_01.png', 100%)
     }
 
     &-2 {
@@ -56,23 +55,58 @@
       @include background-image('../../style/resource/bg/bg_decorate_05.png', 100%)
     }
 
-    &-3,&-4{
+    &-3,
+    &-4 {
       position: fixed;
       top: 550px;
-      width: 52%;
+      width: 50%;
       // width: 48%;
       height: 129px;
       z-index: 1000;
+      opacity: 0;
     }
+
     &-3 {
       left: 0;
       @include background-image('../../style/resource/main/finishLine_l.png', 100%)
     }
+
     &-4 {
       right: 0;
       @include background-image('../../style/resource/main/finishLine_r.png', 100%)
     }
   }
-
+  &-sign-up{
+    @include fixed-X-center;
+    bottom: 150px;
+    font-weight: bold;
+    @include flex-center;
+    flex-direction: column;
+    opacity: 0;
+    display: none;
+    img{
+      width: 520px;
+      height: 387px;
+      margin-bottom: 50px;
+    }
+    &-btn-group{
+      position: relative;
+    }
+    &-hand {
+      width: 80px;
+      height: 80px;
+      @include absolute-X-center;
+      top: -45px;
+      @include background-image('../resource/btn/btn_joinHand.png', 80%);
+      animation: join-hand .3s infinite;
+    }
+  
+    &-btn {
+      width: 100px;
+      height: 100px;
+      margin-top: 50px;
+      @include icon-btn('../resource/btn/btn_join.png', '../resource/btn/btn_join_h.png', 100%);
+    }
+  }
 
 }

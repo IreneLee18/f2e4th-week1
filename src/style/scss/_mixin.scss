@@ -54,3 +54,10 @@
       @include background-image($icon-hover,$size);
     }
 }
+@mixin component-100vh {
+  height: 100vh;
+  &-background{
+    width: 100%;
+    height: 100%;
+  }
+}

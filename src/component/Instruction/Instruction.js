@@ -1,16 +1,14 @@
 import line from "../../style/resource/main/date_weekLine.png";
-function Instruction({ displayNone }) {
+function Instruction() {
   return (
     <section className="instruction">
-      <ul
-        className="instruction-item"
-        style={displayNone.instruction ? { opacity: "0" } : {}}
-      >
-        <li
-          className="sing-up"
-          style={displayNone.singup ? { opacity: "0" } : {}}
-        >
-          <div></div>
+      <div className="instruction-background"></div>
+      <ul className="instruction-item">
+        <li className="sign-up">
+          <div className="join-btn-icon">
+            <div className="hand"></div>
+            <div className="btn"></div>
+          </div>
           <div className="content">
             <h2 className="color-hight">SIGN UP</h2>
             <h4 className="color-white">10/13 - 11/6</h4>
@@ -20,8 +18,10 @@ function Instruction({ displayNone }) {
             <img src={line} alt="" />
           </div>
         </li>
-        <li className="start" style={displayNone.start ? { opacity: "0" } : {}}>
-          <div></div>
+        <li className="start">
+          <div className="icon">
+            <div className="start-icon"></div>
+          </div>
           <div className="content">
             <h2 className="color-hight">START</h2>
             <h4 className="color-white">10/31 - 11/28</h4>
@@ -35,11 +35,10 @@ function Instruction({ displayNone }) {
             <img src={line} alt="" />
           </div>
         </li>
-        <li
-          className="upload"
-          style={displayNone.upload ? { opacity: "0" } : {}}
-        >
-          <div></div>
+        <li className="upload">
+          <div className="icon">
+            <div className="upload-icon"></div>
+          </div>
           <div className="content">
             <h2 className="color-hight">UPLOAD</h2>
             <h4 className="color-white">10/31 - 11/28</h4>

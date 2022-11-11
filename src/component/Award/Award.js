@@ -1,34 +1,20 @@
 import talking from "../../style/resource/bg/bg_talking.png";
-function Award({ displayNone }) {
-  const { bg, highttext, award } = displayNone;
+function Award() {
   return (
-    <section className="award" style={bg ? { opacity: "0" } : {}}>
-      <div className="award-title" style={highttext ? { opacity: "0" } : {}}>
+    <section className="award">
+      <div className="award-background"></div>
+      <div className="award-title title-hight">
         <h2 className="color-hight">區區修煉已經無法滿足了嗎？</h2>
       </div>
-      <div className="award-title" style={award ? { opacity: "0" } : {}}>
+      <div className="award-title title-talking">
         <img src={talking} alt="" />
         <h2 className="color-primary">還有比賽等著你！</h2>
       </div>
-      <ul className="award-decorate" style={award ? {} : { display: "none" }}>
-        <li
-          className="award-decorate-1"
-          style={
-            highttext
-              ? {}
-              : { top: "200px", left: "100px", backgroundSize: "80%" }
-          }
-        ></li>
-        <li
-          className="award-decorate-2"
-          style={
-            highttext
-              ? {}
-              : { top: "170px", right: "100px", backgroundSize: "90%" }
-          }
-        ></li>
+      <ul className="award-decorate">
+        <li className="award-decorate-1"></li>
+        <li className="award-decorate-2"></li>
       </ul>
-      <ul className="award-item" style={award ? { opacity: "0" } : {}}>
+      <ul className="award-item">
         <li>
           <div className="award-icon"></div>
         </li>

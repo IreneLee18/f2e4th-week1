@@ -1,22 +1,22 @@
 import talking from "../../style/resource/bg/bg_talking.png";
-function Sponsor({ displayNone }) {
-  const { bg, sponsor } = displayNone;
+function Sponsor() {
   return (
-    <section className="sponsor" style={bg ? { opacity: "0" } : {}}>
+    <section className="sponsor">
+      <div className="sponsor-background"></div>
       <div className="sponsor-title">
         <img src={talking} alt="" />
         <h2 className="color-primary">贊助單位</h2>
       </div>
-      <ul className="sponsor-item" style={sponsor ? { opacity: "0" } : {}}>
-        <li>
+      <ul className="sponsor-item">
+        <li className="block-item">
           <div className="block"></div>
           <p className="color-dark-secondary">#版塊設計</p>
         </li>
-        <li>
+        <li className="tita-item">
           <div className="tita"></div>
           <p className="color-dark-secondary">#鈦坦科技</p>
         </li>
-        <li>
+        <li className="kdan-item">
           <div className="kdan"></div>
           <p className="color-dark-secondary">#凱鈿科技</p>
         </li>

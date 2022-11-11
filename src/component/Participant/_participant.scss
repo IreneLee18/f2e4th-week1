@@ -1,12 +1,10 @@
 .participant {
-  position: relative;
-  // height: 120vh;
-  height: 320vh;
-  padding: 44px 0 0;
+  @include component-100vh;
 
   &-title {
     @include fixed-X-center;
     top: 65px;
+    opacity: 0;
 
     img {
       @include fixed-X-center;
@@ -20,7 +18,8 @@
       position: relative;
       font-weight: bold;
     }
-    p{
+
+    p {
       @include fixed-X-center;
       bottom: -100px;
     }
@@ -29,19 +28,21 @@
   &-item {
     width: 80vw;
     @include fixed-X-center;
-    top: 268px;
+    top: 368px;
     display: flex;
     justify-content: space-around;
+    opacity: 0;
 
     li {
       width: 33.33333%;
       position: relative;
     }
+
     div {
       @include absolute-X-center;
       width: 103px;
       height: 60px;
-      @include icon-btn('../../style/resource/btn/btn_join.png','../../style/resource/btn/btn_join_h.png', 100%);
+      @include icon-btn('../../style/resource/btn/btn_join.png', '../../style/resource/btn/btn_join_h.png', 100%);
     }
 
     h5 {

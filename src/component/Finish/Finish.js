@@ -1,28 +1,27 @@
-function Finish({ css, displayNone }) {
-  const { decorate1, decorate2 } = css;
-  const { bg, finishline, ribbon, decorate, door } = displayNone;
+import logo from "../../style/resource/logo/logo.png";
+function Finish({ handleClickSignUp }) {
   return (
     <>
-      <section className={`finish ${bg ? "opacity-0" : ""}`}>
-        <div className={`finish-background ${door ? "opacity-0" : ""}`}></div>
-        <ul className={`decorate ${decorate ? "opacity-0" : ""}`}>
-          <li
-            className="decorate-1"
-            style={decorate1}
-          ></li>
-          <li
-            className="decorate-2"
-            style={decorate2}
-          ></li>
-          <li
-            className={`decorate-3 ${finishline ? "opacity-0" : ""}`}
-            style={ribbon ? {} : { width: "48%" }}
-          ></li>
-          <li
-            className={`decorate-4 ${finishline ? "opacity-0" : ""}`}
-            style={ribbon ? {} : { width: "48%" }}
-          ></li>
+      <section className="finish">
+        <div className="finish-background"></div>
+        <div className="finish-flag"></div>
+        <ul className="finish-decorate">
+          <li className="finish-decorate-1"></li>
+          <li className="finish-decorate-2"></li>
+          <li className="finish-decorate-3"></li>
+          <li className="finish-decorate-4"></li>
         </ul>
+        <div className="finish-sign-up">
+          <img src={logo} alt="" />
+          <div className="finish-sign-up-btn-group">
+            <div className="finish-sign-up-hand"></div>
+            <div
+              className="finish-sign-up-btn"
+              onClick={handleClickSignUp}
+            ></div>
+          </div>
+          <h2 className="color-hight">立即報名</h2>
+        </div>
       </section>
     </>
   );

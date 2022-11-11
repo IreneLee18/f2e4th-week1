@@ -1,10 +1,8 @@
 import talking from "../../style/resource/bg/bg_talking.png";
-function Challenge({ displayNone }) {
+function Challenge() {
   return (
-    <section
-      className="challenge"
-      style={displayNone.challenge ? { opacity: "0" } : {}}
-    >
+    <section className="challenge">
+      <div className="challenge-background"></div>
       <div className="challenge-title">
         <img src={talking} alt="" />
         <h2 className="color-primary">年度最強合作，三大主題來襲</h2>
@@ -15,7 +13,7 @@ function Challenge({ displayNone }) {
         </p>
       </div>
       <ul className="challenge-item">
-        <li style={displayNone.week1 ? { opacity: "0" } : {}}>
+        <li className="week1-item">
           <div className="week week1"></div>
           <div>
             <h2 className="color-hight">WEEK 1</h2>
@@ -29,7 +27,7 @@ function Challenge({ displayNone }) {
             </div>
           </div>
         </li>
-        <li style={displayNone.week2 ? { opacity: "0" } : {}}>
+        <li className="week2-item">
           <div className="week week2"></div>
           <div>
             <h2 className="color-hight">WEEK 2</h2>
@@ -43,7 +41,7 @@ function Challenge({ displayNone }) {
             </div>
           </div>
         </li>
-        <li style={displayNone.week3 ? { opacity: "0" } : {}}>
+        <li className="week3-item">
           <div className="week week3"></div>
           <div>
             <h2 className="color-hight">WEEK 3</h2>

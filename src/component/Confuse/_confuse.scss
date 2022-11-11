@@ -1,12 +1,10 @@
 .confuse {
-  position: relative;
-  // height: 220vh;
-  height: 720vh;
-  padding: 44px 0 0;
+  @include component-100vh;
 
   &-title {
     @include fixed-X-center;
-    top: 65px;
+    top: 60px;
+    opacity: 0;
 
     img {
       @include fixed-X-center;
@@ -33,6 +31,7 @@
       width: 33%;
       padding-bottom: 33%;
       position: relative;
+      opacity: 0;
     }
 
     h5 {
