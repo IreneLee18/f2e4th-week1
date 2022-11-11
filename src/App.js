@@ -1,5 +1,4 @@
 import logo from "./style/resource/logo/logo.png";
-import userBtn from "./style/resource/btn/btn_user.png";
 
 // component
 import Home from "./component/Home/HomePage";
@@ -18,10 +17,9 @@ import { useEffect } from "react";
 import Footer from "./component/Layout/Footer/Footer";
 import Main from "./component/Layout/Main/Main";
 
-
 function App() {
   useEffect(() => {
-    GSAP()
+    GSAP();
     // when flash the website, keep page always start at (0, 0)
     if (window.scrollY > 0) {
       window.scrollTo(0, 0);
@@ -32,11 +30,11 @@ function App() {
   };
   return (
     <>
-      <header>
+      <header className="desk-size">
         <img className="header-logo" src={logo} alt="" />
-        <img src={userBtn} alt="" />
+        <div className="user-btn" onClick={handleClickSignUp}></div>
       </header>
-      <main>
+      <main className="desk-size">
         <LayoutSide />
         <Home />
         <Confuse />
@@ -47,10 +45,12 @@ function App() {
         <Sponsor />
         <Finish handleClickSignUp={handleClickSignUp} />
         <section className="main">
-          <Main/>
+          <Main />
         </section>
       </main>
-    <Footer handleClickSignUp={handleClickSignUp}/>
+      <footer className="desk-size">
+        <Footer handleClickSignUp={handleClickSignUp} />
+      </footer>
     </>
   );
 }

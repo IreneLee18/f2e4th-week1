@@ -1,6 +1,6 @@
 function Footer({ handleClickSignUp }) {
   return (
-    <footer>
+    <>
       <div className="map">
         <div className="map-map"></div>
         <div className="map-now"></div>
@@ -11,7 +11,7 @@ function Footer({ handleClickSignUp }) {
         <div className="join-hand"></div>
         <div className="join-us" onClick={handleClickSignUp}></div>
       </div>
-    </footer>
+    </>
   );
 }
 

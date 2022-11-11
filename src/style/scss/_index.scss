@@ -17,109 +17,32 @@
 .color-white {
   color: $black-0;
 }
+.desk-size{
+  @media (max-width:1400px) {
+    display: none;
+  }
+}
 
 header {
   position: fixed;
   width: 100%;
+  height: 200px;
+  z-index: 1200;
 
   img {
     position: absolute;
     top: 30px;
-
-    &:nth-child(1) {
-      width: 200px;
-      left: 40px;
-      opacity: 0;
-    }
-
-    &:nth-child(2) {
-      right: 10px;
-      width: 80px;
-      height: 80px;
-    }
-  }
-}
-
-.main {
-  &-main {
-    z-index: 10;
-    @include fixed-X-center;
-    bottom: 0;
-
-    .applicant {
-      display: flex;
-      justify-content: center;
-      width: 80vw;
-
-      li {
-        text-align: center;
-        position: relative;
-      }
-
-      p {
-        @include absolute-X-center;
-        font-weight: bold;
-
-        &:first-child {
-          top: -48px;
-        }
-
-        &:nth-child(2) {
-          top: -20px;
-          background: $primary;
-          border-radius: 25px;
-          padding: 4px 28px;
-        }
-      }
-
-    }
+    width: 200px;
+    left: 40px;
+    opacity: 0;
   }
 
-  &-footer-center {
-    width: 80vw;
-    height: 15%;
-    @include background-image('../../style/resource/main/road.png', 100%);
-    @include fixed-X-center;
-    bottom: 0;
-    z-index: 2;
+  .user-btn {
+    position: fixed;
+    right: 10px;
+    top: 30px;
+    @include icon-btn('../resource/btn/btn_user.png', '../resource/btn/btn_user_h.png', 100%);
+    width: 80px;
+    height: 80px;
   }
-  &-footer-left,
-    &-footer-right {
-      position: fixed;
-      bottom: -75px;
-      width: 224px;
-      height: 201px;
-      @include background-image('../resource/bg/bg_decorate_09.png', 100%);
-      opacity: 0;
-    }
-
-    &-footer-left {
-      left: 250px;
-      transform: rotateY(180deg);
-    }
-
-    &-footer-right {
-      right: 250px;
-      z-index: -1;
-    }
-
-    &-footer-sponsor-left,
-    &-footer-sponsor-right {
-      position: fixed;
-      bottom: -400px;
-      width: 340px;
-      height: 825px;
-      z-index: -1;
-      opacity: 0;
-    }
-
-    &-footer-sponsor-left {
-      @include background-image('../../style/resource/bg/bg_decorate_04.png', 100%);
-      left: 0;
-    }
-
-    &-footer-sponsor-right {
-      @include background-image('../../style/resource/bg/bg_decorate_08.png', 100%);
-      right: 0;
-    }
 }

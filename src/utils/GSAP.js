@@ -12,6 +12,7 @@ function GSAP() {
       start: "25% top",
       pin: true,
       scrub: true, // 物件動畫根據卷軸捲動程度跑
+      duration: 0.5,
     },
   });
   homeScroll
@@ -47,6 +48,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   confuseScroll
@@ -89,6 +91,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   participantScroll
@@ -107,6 +110,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   challengeScroll
@@ -136,6 +140,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   instructionScroll
@@ -164,6 +169,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   awardScroll
@@ -202,6 +208,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   sponsorScroll
@@ -243,6 +250,7 @@ function GSAP() {
       // markers: true,
       pin: true,
       scrub: true,
+      duration: 0.5,
     },
   });
   finishScroll
@@ -272,8 +280,8 @@ function GSAP() {
     .to(".finish-decorate-4", { width: "0%" }, "<")
     // final finish (applicant is not show)
     .to(".applicant-img", { display: "none" })
-    .to(".finish-flag", { opacity: 0, display: "none" }, "<")
-    .to(".finish-sign-up", { opacity: 1, display: "flex" }, "<")
+    .to(".finish-flag", { opacity: 0, display: "none" }, "<+=1")
+    .to(".finish-sign-up", { opacity: 1, display: "flex" })
     .to(".header-logo", { opacity: 0 }, "<");
 }
 export default GSAP;
