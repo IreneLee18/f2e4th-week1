@@ -17,11 +17,6 @@
 .color-white {
   color: $black-0;
 }
-.desk-size{
-  @media (max-width:1400px) {
-    display: none;
-  }
-}
 
 header {
   position: fixed;

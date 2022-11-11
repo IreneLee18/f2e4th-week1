@@ -246,12 +246,6 @@ p {
   color: #FFFFFF;
 }
 
-@media (max-width: 1400px) {
-  .desk-size {
-    display: none;
-  }
-}
-
 header {
   position: fixed;
   width: 100%;

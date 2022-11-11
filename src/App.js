@@ -30,11 +30,11 @@ function App() {
   };
   return (
     <>
-      <header className="desk-size">
+      <header>
         <img className="header-logo" src={logo} alt="" />
         <div className="user-btn" onClick={handleClickSignUp}></div>
       </header>
-      <main className="desk-size">
+      <main>
         <LayoutSide />
         <Home />
         <Confuse />
@@ -48,7 +48,7 @@ function App() {
           <Main />
         </section>
       </main>
-      <footer className="desk-size">
+      <footer>
         <Footer handleClickSignUp={handleClickSignUp} />
       </footer>
     </>
